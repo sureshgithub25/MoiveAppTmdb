@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Movie_List_App_Logo_Xcode.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

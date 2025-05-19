@@ -9,12 +9,28 @@ import SwiftUI
 
 @main
 struct MovieApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainTabView()
         }
     }
 }
+
+struct MainTabView: View {
+    
+    var body: some View {
+        TabView {
+            HomeListView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+        }
+    }
+}
+
