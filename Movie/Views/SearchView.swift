@@ -12,8 +12,11 @@ struct SearchView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.results, id: \ .id) { movie in
-                MovieRowView(movie: movie)
+            
+            List(viewModel.results, id: \.id) { movie in
+                NavigationLink(destination: MovieDetailView(movie: movie)) {
+                    MovieRowView(movie: movie)
+                }
             }
             .searchable(text: $viewModel.searchText)
             .navigationTitle("Search")

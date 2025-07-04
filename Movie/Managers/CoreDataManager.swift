@@ -8,11 +8,6 @@
 import Foundation
 import CoreData
 
-// MARK: - CoreDataManager.swift
-
-import Foundation
-import CoreData
-
 final class CoreDataManager {
     
     static let shared = CoreDataManager()

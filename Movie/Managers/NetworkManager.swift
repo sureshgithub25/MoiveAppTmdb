@@ -58,7 +58,7 @@ final class NetworkManager {
     func performRequest<T: Decodable>( request: NKRequest,
                                       responseType: T.Type,
                                       completion: @escaping (Result<T, NetworkError>) -> Void) {
-        print(request.urlRequest)
+
         guard let request = request.urlRequest else {
             completion(.failure(.invalidURL))
             return
